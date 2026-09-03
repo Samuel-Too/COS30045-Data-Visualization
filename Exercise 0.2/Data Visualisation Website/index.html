@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Appliance Energy Consumption</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/logo.png" alt="Power Logo" class="logo">
+        <span>Energy Tracker</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="televisions.html">Televisions</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Appliance Energy Consumption in Australia</h1>
+      <p>Explore household energy consumption trends across Australia and calculate your appliance usage costs.</p>
+    </section>
+
+    <!-- Energy Calculator Section -->
+    <section class="calculator-section">
+      <h2>Interactive Appliance Energy Calculator</h2>
+      <form id="energy-calculator" novalidate>
+        <div class="form-group">
+          <label for="appliance-select">Select Appliance or Custom Wattage:</label>
+          <select id="appliance-select">
+            <option value="custom">Custom Entry</option>
+            <option value="100">LED Television (100 W)</option>
+            <option value="200">Refrigerator (200 W)</option>
+            <option value="1200">Washing Machine (1200 W)</option>
+            <option value="2000">Split System AC (2000 W)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="power-watts">Power Usage (Watts):</label>
+          <input type="number" id="power-watts" min="1" max="10000" placeholder="e.g. 150">
+          <span class="error-msg" id="power-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="hours-per-day">Average Daily Use (Hours):</label>
+          <input type="number" id="hours-per-day" min="0.1" max="24" step="0.5" placeholder="e.g. 5">
+          <span class="error-msg" id="hours-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="electricity-rate">Electricity Rate (cents/kWh):</label>
+          <input type="number" id="electricity-rate" min="1" max="100" step="0.1" value="30">
+          <span class="error-msg" id="rate-error"></span>
+        </div>
+
+        <button type="submit" class="btn">Calculate Cost</button>
+      </form>
+
+      <!-- Dynamic Results Panel -->
+      <div id="results-panel" class="results-panel hidden">
+        <h3>Calculation Results</h3>
+        <ul>
+          <li><strong>Daily Consumption:</strong> <span id="res-daily-kwh">0</span> kWh</li>
+          <li><strong>Monthly Consumption:</strong> <span id="res-monthly-kwh">0</span> kWh</li>
+          <li><strong>Yearly Consumption:</strong> <span id="res-yearly-kwh">0</span> kWh</li>
+          <li><strong>Estimated Monthly Cost:</strong> $<span id="res-monthly-cost">0.00</span> AUD</li>
+          <li><strong>Estimated Yearly Cost:</strong> $<span id="res-yearly-cost">0.00</span> AUD</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header">What is an Energy Rating Label?</button>
+          <div class="accordion-content">
+            <p>The Energy Rating Label shows the energy efficiency of an appliance using a star rating system. More stars mean greater efficiency and lower running costs within Australian standards.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">How can I reduce my household appliance energy consumption?</button>
+          <div class="accordion-content">
+            <p>You can lower consumption by choosing high star-rated appliances, turning off electronics at the wall instead of standby mode, and running high-power equipment during off-peak tariff windows.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">What is the average electricity tariff in Australia?</button>
+          <div class="accordion-content">
+            <p>Residential tariffs generally range from 25 to 40 cents per kilowatt-hour (kWh), varying by state, region, and electricity retailer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Samuel Too. Built with assistance from Generative AI (Gemini/GitHub Copilot).</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/calculator.js"></script>
+</body>
+</html>
