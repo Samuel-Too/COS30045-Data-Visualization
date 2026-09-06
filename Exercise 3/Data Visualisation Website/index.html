@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Australian Domestic Energy Insights</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/logo.png" alt="Power Logo" class="logo">
+        <span>Energy Tracker AU</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="televisions.html">Televisions</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Narrative Lead Section -->
+    <section class="hero">
+      <h1>Household Energy Consumption in Australia</h1>
+      <p class="lead-text">
+        With rising residential electricity tariffs across the National Electricity Market (NEM), managing household consumption starts with understanding major appliances. While heating and cooling account for the largest seasonal spikes, continuous entertainment displays and standby electronics generate significant baseline power draw.
+      </p>
+    </section>
+
+    <!-- Key Insights Highlights -->
+    <section class="insights-summary-grid">
+      <div class="summary-card">
+        <h3>Size Matters Most</h3>
+        <p>Across television displays, screen surface area dictates energy draw exponentially more than brand or feature set. Moving from a medium to large screen nearly doubles consumption.</p>
+      </div>
+      <div class="summary-card">
+        <h3>Market Clustering</h3>
+        <p>Australian TV models cluster tightly around 55-inch and 65-inch panels, which sit right at the inflection point where power demands ramp up sharply.</p>
+      </div>
+      <div class="summary-card">
+        <h3>Panel Efficiency Shifts</h3>
+        <p>Display technology (OLED vs LCD vs LED) creates distinct consumption profiles across different form factors, making technology selection critical for long-term running costs.</p>
+      </div>
+    </section>
+
+    <!-- Contextual Information -->
+    <section class="content-block">
+      <h2>Navigating Australia's Energy Rating Framework</h2>
+      <p>
+        The Australian Government's Energy Rating Label requires suppliers to disclose both comparative star ratings and estimated annual kilowatt-hour (kWh) consumption. This allows consumers to benchmark the lifetime operational cost of consumer electronics against the initial retail price tag.
+      </p>
+      <p>
+        Explore our dedicated <a href="televisions.html"><strong>Televisions Exploration</strong></a> page for empirical analysis on screen distributions, power scaling, and panel efficiency.
+      </p>
+    </section>
+
+    <!-- Secondary Utility: Interactive Calculator -->
+    <section class="calculator-section">
+      <h2>Estimate Your Appliance Running Cost</h2>
+      <p>Calculate running costs using current Australian electricity tariffs (default set to 30¢/kWh):</p>
+      
+      <form id="energy-calculator" novalidate>
+        <div class="form-group">
+          <label for="appliance-select">Select Appliance Benchmark:</label>
+          <select id="appliance-select">
+            <option value="custom">Custom Entry</option>
+            <option value="100">LED Television (100 W)</option>
+            <option value="200">Refrigerator (200 W)</option>
+            <option value="1200">Washing Machine (1200 W)</option>
+            <option value="2000">Split System Air Conditioner (2000 W)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="power-watts">Power Usage (Watts):</label>
+          <input type="number" id="power-watts" min="1" max="10000" placeholder="e.g. 150">
+          <span class="error-msg" id="power-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="hours-per-day">Average Daily Use (Hours):</label>
+          <input type="number" id="hours-per-day" min="0.1" max="24" step="0.5" placeholder="e.g. 4">
+          <span class="error-msg" id="hours-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="electricity-rate">Electricity Rate (cents/kWh):</label>
+          <input type="number" id="electricity-rate" min="1" max="100" step="0.1" value="30">
+          <span class="error-msg" id="rate-error"></span>
+        </div>
+
+        <button type="submit" class="btn">Calculate Cost</button>
+      </form>
+
+      <div id="results-panel" class="results-panel hidden">
+        <h3>Estimated Energy & Cost</h3>
+        <ul>
+          <li><strong>Daily Consumption:</strong> <span id="res-daily-kwh">0</span> kWh</li>
+          <li><strong>Monthly Consumption:</strong> <span id="res-monthly-kwh">0</span> kWh</li>
+          <li><strong>Yearly Consumption:</strong> <span id="res-yearly-kwh">0</span> kWh</li>
+          <li><strong>Estimated Monthly Cost:</strong> $<span id="res-monthly-cost">0.00</span> AUD</li>
+          <li><strong>Estimated Yearly Cost:</strong> $<span id="res-yearly-cost">0.00</span> AUD</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Collapsible FAQs -->
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header">What is the Energy Rating Label?</button>
+          <div class="accordion-content">
+            <p>The Energy Rating Label indicates an appliance's energy efficiency using a star rating system. More stars reflect greater relative efficiency compared to other models of equivalent capacity or screen area.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">How is labelled energy consumption calculated?</button>
+          <div class="accordion-content">
+            <p>Labelled consumption uses standardised Australian testing profiles (e.g., AS/NZS standards for TVs specify power consumption in On Mode based on default factory settings for 10 hours daily, plus standby modes).</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">Why does panel size have such a strong impact on TV power?</button>
+          <div class="accordion-content">
+            <p>Because screen area scales quadratically relative to diagonal inches, backlighting or self-emissive subpixels require substantially more continuous wattage to illuminate large surface panels.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Samuel Too. Built with assistance from Generative AI.</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/calculator.js"></script>
+</body>
+</html>

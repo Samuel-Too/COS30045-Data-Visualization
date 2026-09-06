@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Television Energy Insights - Consumer Guide</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/logo.png" alt="Power Logo" class="logo">
+        <span>Energy Tracker AU</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="televisions.html" class="active">Televisions</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <span class="eyebrow">Market Analysis &amp; Buyer's Guide</span>
+      <h1>The Living Room Dilemma: Finding the Energy Sweet Spot</h1>
+      <p class="lead-text">
+        As televisions have grown from compact appliances into wall-filling centerpieces, their hidden running costs have climbed along with them. Using data from the Australian Energy Rating Database, we break down what you are actually paying for when choosing your next screen.
+      </p>
+    </section>
+
+    <section class="narrative-section">
+      <div class="narrative-content">
+        <h2>What’s Actually on the Showroom Floor?</h2>
+        <p>
+          Walk into any Australian retailer, and you will see dozens of screen choices. However, modern displays do not occupy a continuous range—they cluster heavily around fixed industrial panel cuts.
+        </p>
+        <p>
+          The market distribution shows dramatic spikes centered around <strong>140 cm (55-inch)</strong> and <strong>165 cm (65-inch)</strong> formats. Manufacturers optimise raw glass cutting to minimise waste, leaving odd sizes (like 150 cm or 175 cm) as rare anomalies, non-standard imports, or registration misclassifications.
+        </p>
+      </div>
+
+      <figure class="chart-figure">
+        <div class="chart-wrapper">
+          <img src="assets/img/tv-size-frequency-histogram.png" alt="Frequency distribution of television sizes in Australia" class="responsive-chart">
+        </div>
+        <figcaption><strong>Figure 1:</strong> The Australian TV market is overwhelmingly dominated by 55-inch and 65-inch panels.</figcaption>
+      </figure>
+    </section>
+
+    <section class="narrative-section">
+      <div class="narrative-content">
+        <h2>The Area Trap: Why Power Doesn't Scale Linearly</h2>
+        <p>
+          It is easy to assume a 65-inch screen draws only a little more power than a 55-inch model. In reality, display surface area scales quadratically relative to diagonal inches. Lighting a massive display demands exponential energy.
+        </p>
+        <p>
+          Below 50 inches, annual energy consumption remains predictable, tightly bundled under 300 kWh/year. Past the 60-inch threshold, however, the scatter fans out widely. Premium high-brightness backlights, local dimming zones, and high dynamic range (HDR) processing cause power consumption to spike past 1,500 kWh/year for the largest panels.
+        </p>
+      </div>
+
+      <figure class="chart-figure">
+        <div class="chart-wrapper">
+          <img src="assets/img/screen-size-and-labelled-energy-consumption-scatterplot.png" alt="Scatter plot comparing screen size in inches against annual energy use" class="responsive-chart">
+        </div>
+        <figcaption><strong>Figure 2:</strong> Energy use curves upward beyond 60 inches, with wide variances in peak power draw.</figcaption>
+      </figure>
+
+      <figure class="chart-figure">
+        <div class="chart-wrapper">
+          <img src="assets/img/energy-consumption-of-each-screen-size-chart.png" alt="Bar chart of average energy consumption for each screen size" class="responsive-chart">
+        </div>
+        <figcaption><strong>Figure 3:</strong> Average yearly consumption per inch confirms a steady climb punctuated by high-wattage flagship sizes.</figcaption>
+      </figure>
+    </section>
+
+    <section class="narrative-section">
+      <div class="narrative-content">
+        <h2>Simplifying the Choice: Small vs. Medium vs. Large</h2>
+        <p>
+          Evaluating dozens of fractional screen sizes is impractical when shopping. By bucketing the market into three common categories—<strong>Small (&lt;43")</strong>, <strong>Medium (44"–65")</strong>, and <strong>Large (&gt;66")</strong>—the trade-offs become stark:
+        </p>
+      </div>
+
+      <div class="stat-highlight-container">
+        <div class="stat-box">
+          <span class="stat-val">~160 kWh</span>
+          <span class="stat-lbl">Small (&lt;43")</span>
+          <span class="stat-sub">~$48 / year</span>
+        </div>
+        <div class="arrow-indicator">➔</div>
+        <div class="stat-box featured">
+          <span class="stat-val">~400 kWh</span>
+          <span class="stat-lbl">Medium (44–65")</span>
+          <span class="stat-sub">~$120 / year</span>
+        </div>
+        <div class="arrow-indicator">➔</div>
+        <div class="stat-box">
+          <span class="stat-val">~745 kWh</span>
+          <span class="stat-lbl">Large (&gt;66")</span>
+          <span class="stat-sub">~$224 / year</span>
+        </div>
+      </div>
+
+      <figure class="chart-figure">
+        <div class="chart-wrapper">
+          <img src="assets/img/average-energy-costs-and-screen-size.png" alt="Average consumption grouped by Small, Medium, and Large screen size categories" class="responsive-chart">
+        </div>
+        <figcaption><strong>Figure 4:</strong> Stepping up to a large screen nearly doubles the energy draw of a standard medium living room display.</figcaption>
+      </figure>
+    </section>
+
+    <section class="narrative-section">
+      <div class="narrative-content">
+        <h2>Does Panel Technology Change the Equation?</h2>
+        <p>
+          Shoppers frequently ask whether choosing an OLED display will penalise their energy bills compared to standard LED-backlit LCDs. The answer depends heavily on which size bracket you choose.
+        </p>
+        <p>
+          In the <strong>Medium tier (44"–65")</strong>, standard LCD (~380 kWh/yr), OLED (~390 kWh/yr), and LED-LCD (~405 kWh/yr) consume remarkably comparable energy. In the <strong>Small tier</strong>, OLEDs draw significantly more power because they are built as high-refresh gaming displays. In the <strong>Large tier</strong>, full-array LED backlights pull ahead as the highest continuous consumers.
+        </p>
+      </div>
+
+      <figure class="chart-figure">
+        <div class="chart-wrapper">
+          <img src="assets/img/screen-type-and-energy-consumption-chart.png" alt="Screen technology energy consumption across size tiers" class="responsive-chart">
+        </div>
+        <figcaption><strong>Figure 5:</strong> Comparing LCD, LED, and OLED power demands within each size category.</figcaption>
+      </figure>
+    </section>
+
+    <section class="recommendation-section">
+      <h2>Buyer Recommendation: Where to Find the Best Value</h2>
+      <p class="lead-text">
+        Based on our analysis of the Australian market data, here is the most cost-effective approach for your next upgrade:
+      </p>
+
+      <div class="recommendation-grid">
+        <div class="rec-item">
+          <h3>1. Stay in the 55"–65" Sweet Spot</h3>
+          <p>This medium bracket gives you the best balance of market competition, modern panel tech, and contained operational costs. Crossing the 65-inch threshold brings an average <strong>86% jump in electricity use</strong>.</p>
+        </div>
+        <div class="rec-item">
+          <h3>2. Don't Fear Medium OLEDs</h3>
+          <p>If you want premium contrast and deep black levels in a 55" or 65" format, buy OLED with confidence. Their real-world power draw is almost identical to standard LED panels in this size class.</p>
+        </div>
+        <div class="rec-item">
+          <h3>3. Check the kWh Label, Not Just Stars</h3>
+          <p>Energy Star ratings measure efficiency relative to screen area. A 5-star 75-inch TV will still use far more electricity overall than a 3-star 55-inch display. Always compare total yearly kilowatt-hours.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Samuel Too. Built with assistance from Generative AI.</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
