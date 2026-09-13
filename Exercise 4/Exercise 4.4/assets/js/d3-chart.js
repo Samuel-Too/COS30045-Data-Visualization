@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
       drawBarChart(data);
   })
 
-  // Placeholder function
   function drawBarChart(data) {
   }
 });

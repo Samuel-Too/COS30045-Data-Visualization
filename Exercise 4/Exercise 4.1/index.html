@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 4.1</title>
+  <style>
+    body {
+      line-height: 1.5;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    svg {
+      border: 1px solid #ccc;
+      background-color: #e0f2fe; /* Sky */
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Exercise 4.1:  Draw SVGs</h1>
+
+  <!-- Step 1: Base Primitives -->
+  <section>
+    <h2>Step 1: Create a picture with SVG shapes</h2>
+    
+    <div>
+      <svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+        <!-- 1. Sun (<circle>) -->
+        <circle cx="500" cy="70" r="35" fill="#facc15" stroke="#eab308" stroke-width="3" />
+
+        <!-- 2. Lawn / Ground (<rect>) -->
+        <rect x="0" y="280" width="600" height="120" fill="#4ade80" />
+
+        <!-- 3. House Base (<rect>) -->
+        <rect x="180" y="180" width="240" height="120" fill="#f87171" stroke="#dc2626" stroke-width="2" />
+
+        <!-- 4. Roof (<polygon>) -->
+        <polygon points="160,180 300,90 440,180" fill="#991b1b" stroke="#7f1d1d" stroke-width="2" />
+
+        <!-- 5. Door (<rect>) & Doorknob (<circle>) -->
+        <rect x="280" y="225" width="40" height="75" fill="#78350f" />
+        <circle cx="288" cy="265" r="3" fill="#fef08a" />
+
+        <!-- 6. Left Window (<rect> & <line>) -->
+        <rect x="210" y="205" width="40" height="40" fill="#ffffff" stroke="#333333" stroke-width="2" />
+        <line x1="230" y1="205" x2="230" y2="245" stroke="#333333" stroke-width="2" />
+        <line x1="210" y1="225" x2="250" y2="225" stroke="#333333" stroke-width="2" />
+
+        <!-- 7. Right Window (<rect> & <line>) -->
+        <rect x="350" y="205" width="40" height="40" fill="#ffffff" stroke="#333333" stroke-width="2" />
+        <line x1="370" y1="205" x2="370" y2="245" stroke="#333333" stroke-width="2" />
+        <line x1="350" y1="225" x2="390" y2="225" stroke="#333333" stroke-width="2" />
+
+        <!-- 8. Tree Trunk (<rect>) & Canopy (<ellipse>) -->
+        <rect x="75" y="220" width="15" height="70" fill="#78350f" />
+        <ellipse cx="82" cy="200" rx="35" ry="45" fill="#15803d" />
+
+        <!-- 9. Label (<text>) -->
+        <text x="300" y="370" font-size="16" font-family="sans-serif" text-anchor="middle" fill="#1e293b">House</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Step 2: Coordinate System Annotation -->
+  <section class="step-section">
+    <h2>Step 2: Become familiar with the SVG coordinate system</h2>
+    
+    <div>
+      <img 
+        src="step-2-example.jpg" 
+        alt="SVG coordinate system annotation showing origin and shape coordinates" 
+        style="display: block; max-width: 600px; width: 100%; height: auto; margin: 0 auto; border: 1px solid #ccc; border-radius: 4px;"
+      >
+    </div>
+  </section>
+
+  <!-- Step 3: Customised Scene -->
+  <section class="step-section">
+    <h2>Step 3: Customise your picture</h2>
+    
+    <div>
+      <svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+        <!-- Sun with rays -->
+        <circle cx="510" cy="75" r="32" fill="#fbbf24" stroke="#d97706" stroke-width="3" />
+        <line x1="510" y1="35" x2="510" y2="25" stroke="#d97706" stroke-width="3" stroke-linecap="round" />
+        <line x1="510" y1="115" x2="510" y2="125" stroke="#d97706" stroke-width="3" stroke-linecap="round" />
+        <line x1="470" y1="75" x2="460" y2="75" stroke="#d97706" stroke-width="3" stroke-linecap="round" />
+        <line x1="550" y1="75" x2="560" y2="75" stroke="#d97706" stroke-width="3" stroke-linecap="round" />
+
+        <!-- Lawn -->
+        <rect x="0" y="270" width="600" height="130" fill="#22c55e" />
+
+        <!-- Path -->
+        <polygon points="280,300 320,300 350,400 250,400" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,2" />
+
+        <!-- Chimney and Smoke -->
+        <rect x="360" y="100" width="26" height="45" fill="#7f1d1d" stroke="#450a0a" stroke-width="2" />
+        <polyline points="373,95 370,75 378,55 368,35" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-dasharray="3,3" />
+
+        <!-- House Base -->
+        <rect x="180" y="180" width="240" height="120" fill="#fde68a" stroke="#d97706" stroke-width="3" />
+
+        <!-- Roof -->
+        <polygon points="160,180 300,90 440,180" fill="#334155" stroke="#0f172a" stroke-width="3" />
+
+        <!-- Door -->
+        <rect x="280" y="225" width="40" height="75" fill="#9a3412" stroke="#431407" stroke-width="2" />
+        <circle cx="288" cy="265" r="3.5" fill="#facc15" />
+
+        <!-- Left Window -->
+        <rect x="210" y="205" width="40" height="40" fill="#e0f2fe" stroke="#0284c7" stroke-width="2" />
+        <line x1="230" y1="205" x2="230" y2="245" stroke="#0284c7" stroke-width="2" />
+        <line x1="210" y1="225" x2="250" y2="225" stroke="#0284c7" stroke-width="2" />
+
+        <!-- Right Window -->
+        <rect x="350" y="205" width="40" height="40" fill="#e0f2fe" stroke="#0284c7" stroke-width="2" />
+        <line x1="370" y1="205" x2="370" y2="245" stroke="#0284c7" stroke-width="2" />
+        <line x1="350" y1="225" x2="390" y2="225" stroke="#0284c7" stroke-width="2" />
+
+        <!-- Fence -->
+        <line x1="450" y1="285" x2="580" y2="285" stroke="#ffffff" stroke-width="4" />
+        <line x1="465" y1="265" x2="465" y2="305" stroke="#ffffff" stroke-width="3" />
+        <line x1="495" y1="265" x2="495" y2="305" stroke="#ffffff" stroke-width="3" />
+        <line x1="525" y1="265" x2="525" y2="305" stroke="#ffffff" stroke-width="3" />
+        <line x1="555" y1="265" x2="555" y2="305" stroke="#ffffff" stroke-width="3" />
+
+        <!-- Tree -->
+        <rect x="75" y="210" width="16" height="80" fill="#78350f" />
+        <ellipse cx="83" cy="205" rx="42" ry="50" fill="#15803d" />
+        <ellipse cx="83" cy="180" rx="30" ry="35" fill="#16a34a" />
+
+        <!-- Text -->
+        <text x="300" y="380" font-size="16" font-family="sans-serif" text-anchor="middle" fill="#0f172a" font-weight="bold">House</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Step 4: Become familiar with the group element -->
+  <section class="step-section">
+    <h2>Step 4: Grouping with &lt;g&gt; and Transformations</h2>
+    
+    <div>
+      <svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+        <!-- Sun with rays -->
+        <circle cx="510" cy="75" r="32" fill="#fbbf24" stroke="#d97706" stroke-width="3" />
+        <line x1="510" y1="35" x2="510" y2="25" stroke="#d97706" stroke-width="3" stroke-linecap="round" />
+        <line x1="510" y1="115" x2="510" y2="125" stroke="#d97706" stroke-width="3" stroke-linecap="round" />
+        <line x1="470" y1="75" x2="460" y2="75" stroke="#d97706" stroke-width="3" stroke-linecap="round" />
+        <line x1="550" y1="75" x2="560" y2="75" stroke="#d97706" stroke-width="3" stroke-linecap="round" />
+
+        <!-- Lawn -->
+        <rect x="0" y="270" width="600" height="130" fill="#22c55e" />
+
+        <!-- Path -->
+        <polygon points="280,300 320,300 350,400 250,400" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,2" />
+
+        <!-- Chimney and Smoke -->
+        <rect x="360" y="100" width="26" height="45" fill="#7f1d1d" stroke="#450a0a" stroke-width="2" />
+        <polyline points="373,95 370,75 378,55 368,35" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-dasharray="3,3" />
+
+        <!-- House Base -->
+        <rect x="180" y="180" width="240" height="120" fill="#fde68a" stroke="#d97706" stroke-width="3" />
+
+        <!-- Roof -->
+        <polygon points="160,180 300,90 440,180" fill="#334155" stroke="#0f172a" stroke-width="3" />
+
+        <!-- Door -->
+        <rect x="280" y="225" width="40" height="75" fill="#9a3412" stroke="#431407" stroke-width="2" />
+        <circle cx="288" cy="265" r="3.5" fill="#facc15" />
+
+        <!-- Grouped Windows (<g>) -->
+        <g id="windows" fill="#e0f2fe" stroke="#0284c7" stroke-width="2">
+          <g id="window-left">
+            <rect x="210" y="205" width="40" height="40" />
+            <line x1="230" y1="205" x2="230" y2="245" />
+            <line x1="210" y1="225" x2="250" y2="225" />
+          </g>
+          <g id="window-right" transform="translate(140, 0)">
+            <rect x="210" y="205" width="40" height="40" />
+            <line x1="230" y1="205" x2="230" y2="245" />
+            <line x1="210" y1="225" x2="250" y2="225" />
+          </g>
+        </g>
+
+        <!-- Fence -->
+        <line x1="450" y1="285" x2="580" y2="285" stroke="#ffffff" stroke-width="4" />
+        <line x1="465" y1="265" x2="465" y2="305" stroke="#ffffff" stroke-width="3" />
+        <line x1="495" y1="265" x2="495" y2="305" stroke="#ffffff" stroke-width="3" />
+        <line x1="525" y1="265" x2="525" y2="305" stroke="#ffffff" stroke-width="3" />
+        <line x1="555" y1="265" x2="555" y2="305" stroke="#ffffff" stroke-width="3" />
+
+        <!-- Tree -->
+        <rect x="75" y="210" width="16" height="80" fill="#78350f" />
+        <ellipse cx="83" cy="205" rx="42" ry="50" fill="#15803d" />
+        <ellipse cx="83" cy="180" rx="30" ry="35" fill="#16a34a" />
+
+        <!-- Text -->
+        <text x="300" y="380" font-size="16" font-family="sans-serif" text-anchor="middle" fill="#0f172a" font-weight="bold">House</text>
+      </svg>
+    </div>
+  </section>
+
+</body>
+</html>

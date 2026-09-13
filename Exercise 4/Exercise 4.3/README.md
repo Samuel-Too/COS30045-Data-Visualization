@@ -25,4 +25,4 @@ Appended a hard-coded SVG rectangle to verify canvas coordinate mapping and rend
 
 ## AI Declaration
 
-Artificial Intelligence (AI) tools were used to assist with generating documentation following the unit's standardised README structure
+Artificial Intelligence (AI) tools were used to assist with generating documentation following the unit's standardised README structure.

@@ -33,7 +33,7 @@ Extracted summary metrics, ordered the data, and passed it to the chart-renderin
   - `console.log(d3.extent(data, d => d.count))` to return an array containing `[min, max]`
 - Applied JavaScript's `.sort()` method (`(a, b) => b.count - a.count`) to sort brand frequencies in descending order
 - Logged the sorted array to verify that the highest-count brands appear first
-- Executed `drawBarChart(data)` within the `.then()` promise block to hand off the sorted array to the rendering function, accompanied by a `.catch()` block to catch file-loading errors
+- Executed `drawBarChart(data)` within the `.then()` promise block to hand off the sorted array to the rendering function
 - Declared a placeholder `drawBarChart(data)` function to prevent runtime reference errors until the bar chart is constructed in Exercise 4.5
 
 ---

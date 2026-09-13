@@ -12,13 +12,12 @@ An initial drawing of a house and garden created using basic SVG primitives with
 - **`<circle>`**: Renders the sun and door handle
 - **`<polygon>`**: Creates the triangular pitched roof using coordinate points
 - **`<line>`**: Forms the individual window mullions and crossbars
-- **`<polyline>`**: Draws the background hills using connected line segments
 - **`<ellipse>`**: Renders the rounded tree foliage
 - **`<text>`**: Displays a label at the bottom of the canvas
 
 ### Step 2: Become familiar with the SVG coordinate system
 
-![Step 2 Example](<Step 2 Example.jpg>)
+![Step 2 Example](step-2-example.jpg)
 
 - **Origin `(0,0)`**: Located at the **top-left corner** of the SVG container
 - **X-axis**: Extends horizontally to the **right** as values increase
