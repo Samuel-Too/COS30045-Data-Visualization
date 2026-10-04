@@ -1,0 +1,31 @@
+#histogram {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 16px auto;
+}
+
+#histogram svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.axis-label {
+  font-size: 13px;
+  fill: #2b2b2b;
+  font-family: inherit;
+}
+
+.x-axis path,
+.y-axis path,
+.x-axis line,
+.y-axis line {
+  stroke: #4b5563;
+  stroke-width: 1px;
+}
+
+.x-axis text,
+.y-axis text {
+  font-size: 11px;
+  fill: #374151;
+}
